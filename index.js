@@ -9,7 +9,7 @@ input.forEach((item, i) => {
             new Download(id, item.name, item.minutes)
                 .then(xml => {
                     fs.writeFileSync(`./output/${item.name}.xml`, xml ,"utf-8");
-                    console.log(`pending => ${ i / input.length * 100 }%`);
+                    console.log(`pending => ${ ( i + 1 ) / input.length * 100 }%`);
                 })
                 .catch(err => {
                     console.log(err);
