@@ -1,0 +1,20 @@
+{
+  "name": "youku-danmu-downloader",
+  "version": "1.0.0",
+  "description": "YouKu Danmu Downloader",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BugKun/YouKu-Danmu-Downloader.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "youku",
+    "danmu"
+  ],
+  "author": "BugKun",
+  "license": "MIT"
+}
