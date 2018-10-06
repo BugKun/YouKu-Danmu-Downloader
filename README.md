@@ -5,7 +5,8 @@
 <a href="https://nodejs.org">NodeJS</a>
 
 ### 使用方法
-按格式编写 <strong>input.js</strong> ，由于是js文件，有能力的话，可以进行一些骚操作也是可以的。
+* 按格式编写 <strong>input.js</strong> ，由于是js文件，有能力的话，可以进行一些骚操作也是可以的。
+* 运行 <strong>npm start</strong> 即可开始下载。
 
 ### 相关参数
 field | default | desc 
