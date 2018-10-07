@@ -4,7 +4,6 @@ const Get = require("./httpGet"),
 module.exports = class Downloader extends Converter {
     constructor(id, name, minutes) {
         super();
-        this.tasks = [];
         return this.download(id, name, minutes);
     }
 
@@ -21,12 +20,13 @@ module.exports = class Downloader extends Converter {
 
     download(id, name, minutes) {
         return new Promise((resolve, reject) => {
+            let tasks = [];
             for (let i = 0; i <= minutes; i++) {
-                this.tasks.push(
+                tasks.push(
                     this.getChunk(i, id, name)
                 )
             }
-            Promise.all(this.tasks)
+            Promise.all(tasks)
                 .then(() => {
                     resolve(this.end(this.xml));
                 })
