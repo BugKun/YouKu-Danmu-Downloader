@@ -1,4 +1,4 @@
-module.exports = class {
+module.exports = class converter {
     constructor(json) {
         this.xml = `<?xml version="1.0" encoding="UTF-8"?>
       <i>
@@ -9,7 +9,7 @@ module.exports = class {
       <state>0</state>
       <real_name>0</real_name>
       <source>k-v</source>\n`;
-        if(json) this.parse(json);
+        if (json) this.parse(json);
     }
 
     randomTime() {
