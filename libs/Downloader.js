@@ -1,5 +1,5 @@
-const Get = require("./httpGet");
-const Converter = require("./Converter");
+const Get = require("./httpGet"),
+    Converter = require("./Converter");
 
 module.exports = class Downloader extends Converter {
     constructor(id, name, minutes) {

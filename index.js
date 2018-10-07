@@ -1,10 +1,12 @@
-const fs = require("fs");
-const Downloader = require("./libs/Downloader");
-const getInfo = require("./libs/getInfo");
-const input = require("./input");
+const fs = require("fs"),
+    Downloader = require("./libs/Downloader"),
+    getInfo = require("./libs/getInfo"),
+    input = require("./input");
+
 
 let progress = 0;
-input.forEach((item) => {
+
+input.forEach(item => {
     getInfo(item.url)
         .then(({id, minutes}) => {
             new Downloader(id, item.name, minutes)
