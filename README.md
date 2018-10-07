@@ -12,7 +12,7 @@
 field | default | desc 
 ---|---|---
 url | {url} | 视频的url链接
-name | {name} | 弹幕文件的文件名
+name | {name} | 弹幕文件的文件名(选填，若填写则使用填写的名称)
 
 ### 输出
 在此项目目录自动生成的文件夹 <strong>output</strong> 中

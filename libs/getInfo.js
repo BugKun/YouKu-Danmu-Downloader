@@ -4,12 +4,15 @@ module.exports = (url) => new Promise((resolve, reject) => {
     Get(url)
         .then(res => {
             const RegID = res.match(/videoId\: \'(.+?)\'/),
+                id = (RegID) ? RegID[1] : null,
                 RegSeconds = res.match(/seconds\: \'(.+?)\'/),
-                minutes = (RegSeconds) ? Math.ceil(Number(RegSeconds[1]) / 60) : null;
+                minutes = (RegSeconds) ? Math.ceil(Number(RegSeconds[1]) / 60) : null,
+                RegTitle = res.match(/\<meta name\=\"title\" content\=\"(.+?)\" \/\>/),
+                name = (RegTitle)? RegTitle[1] : null;
 
-            if (RegID && minutes) {
-                console.log(`videoId: ${ RegID[1] }, duration: ${ minutes }min`);
-                resolve({ id: RegID[1], minutes });
+            if (id && minutes) {
+                console.log(`videoId: ${ id }, duration: ${ minutes }min`);
+                resolve({ id, minutes, name });
             } else {
                 reject(null);
             }
