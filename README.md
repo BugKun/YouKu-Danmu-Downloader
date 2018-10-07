@@ -13,7 +13,6 @@ field | default | desc
 ---|---|---
 url | {url} | 视频的url链接
 name | {name} | 弹幕文件的文件名
-minutes | {minutes} | 视频持续多少分钟（选填，但填写了能提高精准度）
 
 ### 输出
 在文件夹 <strong>output</strong> 中

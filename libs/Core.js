@@ -17,9 +17,8 @@ module.exports = class {
         return Math.floor(time);
     }
 
-    ramdomHash(len) {
-        const randomValue = "0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f";
-        const randomArray = randomValue.split(",");
+    randomHash(len) {
+        const randomArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
         let random = "";
         for (let i = 0; i < len; i++) {
             random += randomArray[Math.floor(Math.random() * 16)];
@@ -39,7 +38,7 @@ module.exports = class {
             let ct = 1; //弹幕样式
             let size = 19;  //字体大小
             let content = item.content; //弹幕内容
-            this.xml += `<d p="${ playat },${ ct },${ size },${ color },1430559225,0,${this.ramdomHash(8)},${this.randomTime()}">${ content }</d>\n`
+            this.xml += `<d p="${ playat },${ ct },${ size },${ color },1430559225,0,${this.randomHash(8)},${this.randomTime()}">${ content }</d>\n`
         });
         return true;
     }
